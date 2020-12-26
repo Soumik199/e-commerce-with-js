@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const myCart = document.querySelector(".my-cart");
   const cartCount = document.querySelector("#cart-count");
 
+  fetch("./data/products.json")
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+
   const addedItems = [];
 
   function renderMyCart(product) {
