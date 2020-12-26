@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Saikat180891/e-commerce-with-js#readme",
   "dependencies": {
+    "http-server": "^0.12.3",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
