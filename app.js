@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const myCart = document.querySelector("#cart-list");
   const cartCount = document.querySelector("#cart-count");
   const total_cost = document.querySelector("#total");
-  
 
   let addedItems = [];
 
@@ -57,25 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div>Rs: ${product.sp}</div>
             <button class="remove-cart">Remove</button>`;
-           
+
     myCart.append(li);
   }
 
-myCart.addEventListener('click', (event)=>{
-  if(event.target.className.includes("remove-cart")){
-    const id = event.target.parentNode.id;
-    addedItems = addedItems.filter(item => item.id != id);
-    myCart.innerHTML = ``;
-    addedItems.forEach(item => renderMyCart(item));
-  }
-})
+  myCart.addEventListener("click", (event) => {
+    if (event.target.className.includes("remove-cart")) {
+      const id = event.target.parentNode.id;
+      addedItems = addedItems.filter((item) => item.id != id);
+      myCart.innerHTML = ``;
+      addedItems.forEach((item) => renderMyCart(item));
+    }
+  });
 
-  function renderTotalCost(){
+  function renderTotalCost() {
     var totalCost = 0;
-    addedItems.forEach((item)=>{
+    addedItems.forEach((item) => {
       totalCost = totalCost + item.sp;
-    })
-   total_cost.innerHTML = totalCost;
+    });
+    total_cost.innerHTML = totalCost;
   }
 
   function renderProducts(products = []) {
