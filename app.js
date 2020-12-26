@@ -38,18 +38,16 @@ var products_data = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
-  const myCart = document.querySelector(".my-cart");
+  const myCart = document.querySelector("#cart-list");
   const cartCount = document.querySelector("#cart-count");
+  const total_cost = document.querySelector("#total");
 
-  fetch("./data/products.json")
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-
-  const addedItems = [];
+  let addedItems = [];
 
   function renderMyCart(product) {
     const li = document.createElement("LI");
     li.className = "flex justify-between";
+    li.id = product.id;
     li.innerHTML = `
             <div>
               <img
@@ -57,8 +55,26 @@ document.addEventListener("DOMContentLoaded", () => {
               />
             </div>
             <div>Rs: ${product.sp}</div>
-            <button>Remove</button>`;
+            <button class="remove-cart">Remove</button>`;
+
     myCart.append(li);
+  }
+
+  myCart.addEventListener("click", (event) => {
+    if (event.target.className.includes("remove-cart")) {
+      const id = event.target.parentNode.id;
+      addedItems = addedItems.filter((item) => item.id != id);
+      myCart.innerHTML = ``;
+      addedItems.forEach((item) => renderMyCart(item));
+    }
+  });
+
+  function renderTotalCost() {
+    var totalCost = 0;
+    addedItems.forEach((item) => {
+      totalCost = totalCost + item.sp;
+    });
+    total_cost.innerHTML = totalCost;
   }
 
   function renderProducts(products = []) {
@@ -94,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addedItems.push(product);
     cartCount.innerHTML = `Cart: ${addedItems.length}`;
     renderMyCart(product);
+    renderTotalCost();
   }
 
   renderProducts(products_data);
