@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
-  <body>
-    <header class="navbar w-full flex justify-between">
-      <div class="brand">Brand Logo</div>
-      <div><input type="search" placeholder="Search something" /></div>
-      <div id="cart">
-        <span id="cart-count">Cart: 0</span>
-        <ul class="my-cart"></ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <header class="navbar w-full flex justify-between">
+    <div class="brand">Brand Logo</div>
+    <div><input type="search" placeholder="Search something" /></div>
+    <div id="cart">
+      <span id="cart-count">Cart: 0</span>
+      <div class="my-cart">
+        <ul id="cart-list"></ul>
+        <span id="total"></span>
       </div>
-    </header>
-    <main class="container"></main>
-    <!-- <script src="./data.js"></script> -->
-    <script src="./app.js"></script>
-  </body>
+    </div>
+  </header>
+  <main class="container"></main>
+  <!-- <script src="./data.js"></script> -->
+  <script src="./app.js"></script>
+</body>
+
 </html>
