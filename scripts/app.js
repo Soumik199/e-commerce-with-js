@@ -6,23 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let addedItems = [];
 
-  // function renderMyCart(product) {
-  //   const li = document.createElement("LI");
-  //   li.className = "flex justify-between";
-  //   li.id = product.id;
-  //   li.innerHTML = `
-  //           <div>
-  //             <img
-  //               src=${product.img}
-  //             />
-  //           </div>
-  //           <div>Rs: ${product.sp}</div>
-  //           <button class="remove-cart">Remove</button>`;
-
-  //   myCart.append(li);
-  //   renderTotalCost();
-  // }
-
   myCart.addEventListener("click", (event) => {
     if (event.target.className.includes("remove-cart")) {
       const id = event.target.parentNode.id;
@@ -53,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       addedItems.push(productToAdd);
       cartCount.innerHTML = `Cart = ${addedItems.length}`;
       renderMyCart(productToAdd);
+      renderTotalCost();
     }
   });
 
