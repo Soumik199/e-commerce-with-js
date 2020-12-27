@@ -13,5 +13,4 @@ function renderMyCart(product) {
             <button class="remove-cart">Remove</button>`;
 
   myCart.append(li);
-  // renderTotalCost();
 }
