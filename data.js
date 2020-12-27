@@ -1,4 +1,4 @@
-var products = [
+var products_data = [
   {
     id: 1,
     prod_name: "Surf Excell",
