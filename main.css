@@ -113,116 +113,114 @@ li {
   height: 30px;
   cursor: pointer;
 }
-.logo{
+.logo {
   width: 80px;
 }
-.cat-list{
+.cat-list {
   background-color: rgb(231, 76, 28);
   color: white;
 }
-.category{
+.category {
   position: relative;
 }
-.category:hover #lst{
-  display:block;
+.category:hover #lst {
+  display: block;
   background-color: tomato;
 }
 
-#lst{
-  display:none;
+#lst {
+  display: none;
   position: absolute;
   top: 20px;
   left: 0;
   padding: 10px;
-  background-color:orangered;
+  background-color: orangered;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
- 
 }
-.li-1 a{
+.li-1 a {
   color: white;
 }
-footer{
+footer {
   position: relative;
   width: 100%;
   background-color: rgb(253, 251, 255);
 }
 /* container*/
-.cont{
-  display:flex;
+.cont {
+  display: flex;
 }
 /* container box */
-.cont .box{
+.cont .box {
   flex-basis: 50%;
   padding: 10px 20px;
 }
-a{
+a {
   text-decoration: none;
   font-size: 1.2rem;
-  color:black;
-  
+  color: black;
 }
 /*left part of footer*/
-.leftside h3{
-     font-size: 1.5rem;
-     color:#6cd138;;
-     margin:10px;
-
+.leftside h3 {
+  font-size: 1.5rem;
+  color: #6cd138;
+  margin: 10px;
 }
 .drop li {
   font-size: 1.2rem;
-  color:black;
+  color: black;
   padding: 5px;
-  margin:5px;
+  margin: 5px;
   margin-bottom: 5px;
   list-style: none;
   font-weight: 500;
 }
 /*centerpart of footer*/
-.centerside h4
-{
+.centerside h4 {
   font-size: 1.5rem;
-     color:#58f50a;;
-     margin:10px;
+  color: #58f50a;
+  margin: 10px;
 }
 .menu li {
   font-size: 1.2rem;
-  color:black;
+  color: black;
   padding: 5px;
-  margin:5px;
+  margin: 5px;
   margin-bottom: 5px;
   list-style: none;
   font-family: "ProximaNovaA-Regular";
 }
 /*right part of footer*/
-.rightside h2
-{
+.rightside h2 {
   font-size: 1.5rem;
-     color:#59d31d;;
-     margin:10px;
-}
-.social i
-{
-  font-size: 25px;
-  margin-left:30px;
-  color:rgb(49, 15, 240);
-  background-color:rgb(252, 252, 252);
- 
-}
-.social i:hover
-{
-  color:rgb(243, 9, 9);
-  background-color: rgb(236, 236, 213);
-}
-.cat{
+  color: #59d31d;
   margin: 10px;
 }
-.cat span{
-   font-size: 1.2rem;
-   color: #61e420;
-   font-weight: 700;
+.social i {
+  font-size: 25px;
+  margin-left: 30px;
+  color: rgb(49, 15, 240);
+  background-color: rgb(252, 252, 252);
 }
-.cat p{
+.social i:hover {
+  color: rgb(243, 9, 9);
+  background-color: rgb(236, 236, 213);
+}
+.cat {
+  margin: 10px;
+}
+.cat span {
+  font-size: 1.2rem;
+  color: #61e420;
+  font-weight: 700;
+}
+.cat p {
   font-size: 1.2rem;
   color: #0d0e0d;
   font-weight: 500;
+}
+#cart-list .flex .remove-cart {
+  padding: 4px 20px;
+  height: 30px;
+  color: white;
+  background-color: #38384f;
 }

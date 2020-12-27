@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="remove-cart">Remove</button>`;
 
     myCart.append(li);
+    renderTotalCost();
   }
 
   myCart.addEventListener("click", (event) => {
@@ -66,6 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
       addedItems = addedItems.filter((item) => item.id != id);
       myCart.innerHTML = ``;
       addedItems.forEach((item) => renderMyCart(item));
+      if(addedItems.length == 0){
+        renderTotalCost();
+      }
+      cartCount.innerHTML = `Cart: ${addedItems.length}`;
     }
   });
 
@@ -74,7 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
     addedItems.forEach((item) => {
       totalCost = totalCost + item.sp;
     });
-    total_cost.innerHTML = totalCost;
+    console.log(totalCost)
+    if(totalCost === 0){
+      total_cost.removeChild(total_cost.firstChild);
+    }else{
+      total_cost.innerHTML = `<p> Total: ${totalCost} </p>`;
+    } 
   }
 
   function renderProducts(products = []) {
@@ -110,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
     addedItems.push(product);
     cartCount.innerHTML = `Cart: ${addedItems.length}`;
     renderMyCart(product);
-    renderTotalCost();
   }
 
   renderProducts(products_data);
