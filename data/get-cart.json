@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "prod_name": "Camera",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxupSYkEmuwMdvMuwGLTx_U74QI961unrSQ&usqp=CAU",
+    "sp": 999,
+    "discount": "35% Off"
+  },
+  {
+    "id": 2,
+    "prod_name": "Smart_Watch",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc0tvGFe1kRrUSqV5moqoA7c5FkdSfAnbtqA&usqp=CAU",
+    "sp": 5999,
+    "discount": "5% Off"
+  },
+  {
+    "id": 3,
+    "prod_name": "Sanitizer",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLxeJQAusGxT4eID3opM6Y4XWIS6GT45_pA&usqp=CAU",
+    "sp": 100,
+    "discount": "5% Off"
+  },
+  {
+    "id": 4,
+    "prod_name": "Black_Shoes",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJkmSMuoyfBAut8Va8zyTKAT4_7bOhor86NQ&usqp=CAU",
+    "sp": 1999,
+    "discount": "15% Off"
+  }
+]

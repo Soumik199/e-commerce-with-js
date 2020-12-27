@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const total_cost = document.querySelector("#total");
   const container = document.querySelector(".container");
 
+  initializePage();
+
   let addedItems = [];
 
   myCart.addEventListener("click", (event) => {
@@ -39,6 +41,4 @@ document.addEventListener("DOMContentLoaded", () => {
       renderTotalCost();
     }
   });
-
-  renderProducts(products_data);
 });

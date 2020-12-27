@@ -1,0 +1,18 @@
+{
+  "bigbasket": [
+    {
+      "name": "In News",
+      "url": "/"
+    },
+    {
+      "name": "Green Basket",
+      "url": "/adas"
+    }
+  ],
+  "help": [
+    {
+      "name": ""
+    }
+  ],
+  "popular_brands": []
+}
