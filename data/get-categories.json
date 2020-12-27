@@ -1,5 +1,23 @@
 [
   {
-    "cat_name": "Fruits and Vegetables"
+    "cat_name": "Fruits and Vegetables",
+    "url": "/test"
+  },
+  {
+    "cat_name": "Fruits-grains, oils and masala",
+    "url": "/test"
+  },
+  {
+    "cat_name": "backery, cakes and dairy",
+    "url": "/test"
+  },
+  {
+    "cat_name": "Beverages",
+    "url": "/test"
+  },
+  {
+    "cat_name": "Snakes and branded food",
+    "url": "/test"
   }
 ]
+

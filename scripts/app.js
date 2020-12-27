@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
 
   initializePage();
+  fetchCategory();
 
   let addedItems = [];
 
