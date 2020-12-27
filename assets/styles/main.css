@@ -59,6 +59,7 @@ li {
 .my-cart {
   display: none;
   position: absolute;
+  width: 20rem;
   top: 20px;
   right: 0;
   padding: 10px;
@@ -72,20 +73,27 @@ li {
 
 .my-cart li div img {
   width: 100%;
+  height: 50px;
 }
 
 .container {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
+.center-aline-item {
+  align-self: center;
+}
 .product {
   width: 300px;
   padding: 10px;
   margin: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  margin-bottom: 2rem;
 }
 
 .product .pricing {
@@ -98,6 +106,7 @@ li {
 
 .product .image img {
   width: 100%;
+  height: 18rem;
 }
 
 .product .pricing span:first-child {
@@ -220,6 +229,7 @@ a {
 }
 #cart-list .flex .remove-cart {
   padding: 4px 20px;
+  align-self: center;
   height: 30px;
   color: white;
   background-color: #38384f;

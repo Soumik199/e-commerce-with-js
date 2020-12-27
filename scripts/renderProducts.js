@@ -17,7 +17,7 @@ function renderProducts(products = []) {
                     <button class="add-to-cart">ADD TO CART</button>
                 </div>
             `;
-    div.className = "product flex flex-col";
+    div.className = "product flex justify-between flex-col";
     div.id = product.id;
     container.append(div);
   });
