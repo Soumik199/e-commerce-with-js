@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartCount = document.querySelector("#cart-count");
   const total_cost = document.querySelector("#total");
   const container = document.querySelector(".container");
+  const sortBy = document.querySelector("#sort-by");
 
   initializePage();
   fetchCategory();
@@ -19,6 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
         renderTotalCost();
       }
       cartCount.innerHTML = `Cart: ${addedItems.length}`;
+    }
+  });
+
+  sortBy.addEventListener("change", (e) => {
+    const value = e.target.value;
+    const prodData = allData[0];
+    if (value === "l_h") {
+      const prodDataShorted = prodData.sort((a, b) => a.sp - b.sp);
+      renderProducts(prodDataShorted);
+    } else if (value === "h_l") {
+      const prodDataShorted = prodData.sort((a, b) => b.sp - a.sp);
+      renderProducts(prodDataShorted);
     }
   });
 

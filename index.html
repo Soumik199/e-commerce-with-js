@@ -10,90 +10,24 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-
   <body>
-    <header class="navbar w-full flex justify-between">
-      <div class="brand">
-        <img src="./assets/images/download.png" class="logo" alt="logo" />
-        <div class="category">
-          <button class="cat-list">Shop by category ></button>
-          <ul id="lst"></ul>
-        </div>
-      </div>
-      <div><input type="search" placeholder="Search something" /></div>
-      <div id="cart">
-        <span id="cart-count">Cart: 0</span>
-        <div class="my-cart">
-          <ul id="cart-list"></ul>
-          <span id="total"></span>
-        </div>
-      </div>
-    </header>
-
+    <header id="header"></header>
+    <div class="flex">
+      <select id="sort-by">
+        <option value="prod_name">Product Name</option>
+        <option value="l_h">Price: Low To High</option>
+        <option value="h_l">Price: High To Low</option>
+      </select>
+    </div>
     <main class="container"></main>
-    <!--------FOOTER---------------->
-    <footer id="footer">
-      <div class="cont">
-        <div class="leftside box">
-          <h3>bigbasket</h3>
-          <div class="drop">
-            <li><a href="#"> In News</a></li>
-            <li><a href="#"> Green Basket</a></li>
-            <li><a href="#">Terms and Conditions</a></li>
-            <li><a href="#">Careers At bigbasket</a></li>
-            <li><a href="#">bb Instant</a></li>
-            <li><a href="#">bb Daily</a></li>
-          </div>
-        </div>
-        <div class="centerside box">
-          <h4>Help</h4>
-          <div class="menu">
-            <a href=""><li>FAQs</li></a>
-            <a href=""><li>bb Wallet FAQs</li></a>
-            <a href=""><li>bb Wallet T&Cs</li></a>
-            <a href=""><li>Vendor Connect</li></a>
-            <a href=""><li>E-Invoice Compliance for bigbasket</li></a>
-            <a href=""><li>Vendors</li></a>
-          </div>
-        </div>
-        <div class="rightside box">
-          <h2>Get Social With Us</h2>
-          <div class="social">
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="cat">
-        <span> POPULAR CATEGORIES:</span>
-        <p>
-          Fruits & Vegetables, Basmati Rice, Green Tea, OTC, Cheese, Dry Fruits,
-          Chocolates & Sweets, Soft Drinks, Energy Drinks, Bakery, Cakes &
-          Dairy, Olive Oils, Foodgrains, Oil & Masala, Sunflower Oils, Liquid
-          Soaps & Bars,
-        </p>
-        <span>POPULAR BRANDS:</span>
-        <p>
-          Amul, Haldirams , Tropicana, Kelloggs, Dettol, MTR, Bru , McCain,
-          Ariel , Britannia, Nescafe , Colgate, Horlicks, Galaxy, Complan,
-        </p>
-        <span>CITIES WE SERVE:</span>
-        <p>
-          Bangalore, Hyderabad, Mumbai, Pune, Chennai, Delhi, Mysore,
-          Coimbatore, Vijayawada-Guntur, Kolkata, Ahmedabad-Gandhinagar, Nashik,
-          Lucknow-Kanpur, Gurgaon, Vadodara, Visakhapatnam, Surat, Nagpur,
-          Patna, Indore, Chandigarh Tricity, Jaipur, Bhopal, Noida-Ghaziabad,
-          Kochi,
-        </p>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
     <script src="./data.js"></script>
-    <script src="./scripts/renderMyCart.js"></script>
-    <script src="./scripts/renderProducts.js"></script>
-    <script src="./scripts/getCategories.js"></script>
-    <script src="./scripts/apis.js"></script>
-    <script src="./scripts/app.js"></script>
+    <script src="./src/components/header.js"></script>
+    <script src="./src/components/footer.js"></script>
+    <script src="./src/pages/home/getCategories.js"></script>
+    <script src="./src/pages/home/renderMyCart.js"></script>
+    <script src="./src/pages/home/renderProducts.js"></script>
+    <script src="./src/pages/home/apis.js"></script>
+    <script src="./src/pages/home/app.js"></script>
   </body>
 </html>
