@@ -1,0 +1,31 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: rgb(245, 60, 60);
+  color: #ffffff;
+}
+
+.btn.success {
+  background-color: #51ee31;
+  color: #ffffff;
+}
+
+.btn.raised {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.01);
+  transition: all 0.5s ease-in-out;
+}
+
+.btn.raised:active {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+}

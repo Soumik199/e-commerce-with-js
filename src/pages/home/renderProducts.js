@@ -1,8 +1,10 @@
 function renderProducts(products = []) {
   const container = document.querySelector(".container");
+  container.innerHTML = "";
   products.forEach((product) => {
-    const div = document.createElement("DIV");
-    div.innerHTML = `
+    const a = document.createElement("A");
+    a.href = `/pd.html?productId=${product.id}`;
+    a.innerHTML = `
                 <div class="image flex flex-col">
                     <img
                         src=${product.img}
@@ -17,8 +19,8 @@ function renderProducts(products = []) {
                     <button class="add-to-cart">ADD TO CART</button>
                 </div>
             `;
-    div.className = "product flex justify-between flex-col";
-    div.id = product.id;
-    container.append(div);
+    a.className = "product flex justify-between flex-col";
+    a.id = product.id;
+    container.append(a);
   });
 }

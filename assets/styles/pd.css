@@ -1,0 +1,12 @@
+@import "./global.css";
+@import "./header.css";
+@import "./button.css";
+@import "./margin.css";
+
+.pd-wrapper {
+  padding: 10px 200px;
+}
+
+.pd-wrapper img {
+  margin-right: 10px;
+}

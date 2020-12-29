@@ -1,3 +1,5 @@
+var allData = [];
+
 function initializePage() {
   const cartCount = document.querySelector("#cart-count");
   const urls = ["../data/get-products.json", "../data/get-cart.json"];
@@ -6,6 +8,7 @@ function initializePage() {
     .then((res) => Promise.all(res.map((r) => r.json())))
     .then((data) =>
       data.forEach((d, i) => {
+        allData.push(d);
         if (i === 0) {
           renderProducts(d);
         }
