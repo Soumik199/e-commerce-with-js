@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const total_cost = document.querySelector("#total");
   const container = document.querySelector(".container");
   const sortBy = document.querySelector("#sort-by");
+  const filterby = document.querySelector("#filter-by");
 
   initializePage();
   fetchCategory();
@@ -34,6 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
       renderProducts(prodDataShorted);
     }
   });
+  console.log(filterby)
+  filterby.addEventListener("change",(e)=>{
+    const value = e.target.value;
+    console.log(e)
+    console.log(value)
+    const prodData = allData[0];
+    if(value === "price1"){
+      const prodDatafilter = prodData.filter(prodData => prodData.sp > 2001);
+      console.log(prodDatafilter)
+      renderProducts(prodDatafilter);
+    }
+  })
 
   function renderTotalCost() {
     var totalCost = 0;
